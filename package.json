@@ -1,0 +1,41 @@
+{
+  "name": "template-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.mts",
+  "scripts": {
+    "start": "npm run build && npm run run",
+    "run": "node dist/main.mjs",
+    "build": "npm run typescript",
+    "typescript": "npm run lint && npm run format && tsc",
+    "lint": "eslint \"src/**/*.{cjs,mjs,js,jsx,ts,tsx,mts,cts}\" --quiet --fix",
+    "format": "prettier --write \"src/**/*.{cjs,mjs,js,jsx,ts,tsx,mts,cts,json,html,css}\" \"src/**/*.{cjs,mjs,js,jsx,ts,tsx,mts,cts,json,html,css}\"",
+    "update": "ncu -u"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/temetvince/template-typescript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/temetvince/template-typescript/issues"
+  },
+  "homepage": "https://github.com/temetvince/template-typescript#readme",
+  "devDependencies": {
+    "@types/node": "^20.11.28",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "npm-check-updates": "^16.14.17",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.10.1",
+    "graphql": "^16.8.1",
+    "sequelize": "^6.37.1",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  }
+}
