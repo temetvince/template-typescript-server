@@ -1,15 +1,16 @@
 {
   "name": "template-typescript",
   "version": "1.0.0",
-  "description": "",
-  "main": "src/main.mts",
+  "description": "A template for REST API using TypeScript, Express, Sequelize, and SQLite",
+  "main": "src/main.ts",
   "scripts": {
     "start": "npm run build && npm run run",
-    "run": "node dist/main.mjs",
+    "run": "node dist/main.js",
     "build": "npm run typescript",
     "typescript": "npm run lint && npm run format && tsc",
-    "lint": "eslint \"src/**/*.{cjs,mjs,js,jsx,ts,tsx,mts,cts}\" --quiet --fix",
-    "format": "prettier --write \"src/**/*.{cjs,mjs,js,jsx,ts,tsx,mts,cts,json,html,css}\" \"src/**/*.{cjs,mjs,js,jsx,ts,tsx,mts,cts,json,html,css}\"",
+    "lint": "eslint \"src/**/*.{ts,tsx}\" --quiet --fix",
+    "format": "prettier --write \"src/**/*.{ts,tsx,json,html,css}\"",
+    "dev": "ts-node-dev src/index.ts",
     "update": "ncu -u"
   },
   "repository": {
@@ -23,18 +24,21 @@
   },
   "homepage": "https://github.com/temetvince/template-typescript#readme",
   "devDependencies": {
-    "@types/node": "^20.11.28",
-    "@typescript-eslint/eslint-plugin": "^7.2.0",
-    "eslint": "^8.57.0",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.9.0",
+    "@typescript-eslint/eslint-plugin": "^8.14.0",
+    "@typescript-eslint/parser": "^8.14.0",
+    "eslint": "^9.15.0",
     "eslint-config-prettier": "^9.1.0",
-    "npm-check-updates": "^16.14.17",
-    "prettier": "^3.2.5",
-    "typescript": "^5.4.2"
+    "eslint-plugin-prettier": "^5.2.1",
+    "npm-check-updates": "^17.1.11",
+    "prettier": "^3.3.3",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.3"
   },
   "dependencies": {
-    "@apollo/server": "^4.10.1",
-    "graphql": "^16.8.1",
-    "sequelize": "^6.37.1",
+    "express": "^5.0.1",
+    "sequelize": "^6.37.5",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7"
   }

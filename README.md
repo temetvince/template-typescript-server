@@ -1,9 +1,7 @@
 # template-typescript-dal
 
 ### Stack
-* Apollo
 * ESLint
-* GraphQL
 * Prettier
 * Sequelize
 * SQLite3

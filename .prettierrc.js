@@ -1,10 +1,11 @@
 module.exports = {
-    endOfLine: "lf",
+    endOfLine: 'lf',
     experimentalTernaries: true,
     jsxSingleQuote: true,
-    proseWrap: "always",
+    proseWrap: 'always',
     singleAttributePerLine: true,
     singleQuote: true,
     tabWidth: 3,
-    trailingComma: "all",
-};
+    trailingComma: 'all',
+ };
+ 

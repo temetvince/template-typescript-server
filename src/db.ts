@@ -1,5 +1,3 @@
-import sqlite3 from 'sqlite3';
-import { Database } from 'sqlite';
 import { Sequelize } from 'sequelize';
 
 /**
@@ -37,7 +35,7 @@ export class DB {
  * A class representing a database connection.
  */
 class database {
-   private db: Database<sqlite3.Database, sqlite3.Statement> | undefined;
+   private db: Sequelize | undefined;
    private readonly path: string;
 
    constructor(path: string) {
@@ -51,7 +49,7 @@ class database {
     * @function getDb
     * @returns {Promise} - A promise that resolves to the database instance.
     */
-   public getDb = async (): Promise<any> => {
+   public getDb = async (): Promise<Sequelize> => {
       if (this.db) {
          return this.db;
       } else {
